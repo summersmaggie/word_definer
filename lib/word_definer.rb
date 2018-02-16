@@ -51,6 +51,4 @@ class Definition
   def save_definition
     @@definition_list.push(self)
   end
-
-
 end

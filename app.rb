@@ -19,6 +19,7 @@ end
 
 get('/output/:id') do
   @word_to_define = Word.find(params[:id])
+  @word_to_display = @word_to_define.word
   @definition_list = Definition.all()
   erb(:output)
 end
@@ -28,6 +29,5 @@ post('/output/:id') do
   new_definition = Definition.new(@definition)
   new_definition.save_definition()
   @definition_list = Definition.all()
-  Definition.clear_list()
   erb(:output)
 end
