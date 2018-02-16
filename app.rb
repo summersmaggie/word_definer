@@ -15,5 +15,10 @@ post('/') do
   new_word.save()
   @word_list = Word.all()
   erb(:input)
-  # binding.pry
+end
+
+get('output/:id') do
+  @word = Word.find(params[:id])
+  binding.pry
+  erb(:output)
 end

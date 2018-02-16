@@ -11,5 +11,5 @@
 </form>
 
 <% @word_list.each do |new_word| %>
-  <h3><%= new_word.word %></h3>
+  <h3><a href="/output/<%= new_word.id %>"><%= new_word.word %></a></h3>
 <% end %>
