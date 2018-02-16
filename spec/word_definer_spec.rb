@@ -45,6 +45,7 @@ describe("Word") do
       word1 = Word.new("hello")
       word1.save()
       word2 = Word.new("goodbye")
+      word2.save()
       expect(Word.find(1)).to(eq(word1))
       expect(Word.find(2)).to(eq(word2))
     end
