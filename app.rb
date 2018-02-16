@@ -19,6 +19,5 @@ end
 
 get('/output/:id') do
   @word_to_define = Word.find(params[:id])
-  # binding.pry
   erb(:output)
 end

@@ -51,3 +51,11 @@ describe("Word") do
     end
   end
 end
+
+describe("Definition") do
+  describe(".all_definitions") do
+    it("is empty at first") do
+      expect(Definition.all_definitions()).to(eq([]))
+    end
+  end
+end

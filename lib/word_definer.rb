@@ -29,5 +29,18 @@ class Word
       end
     end
   end
+end
+
+class Definition
+  attr_accessor :definition
+
+  @@definition_list = []
+
+  def initialize()
+    @definition = definition
+  end
+
+  def self.all_definitions
+  end
 
 end
