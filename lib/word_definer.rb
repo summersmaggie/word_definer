@@ -1,16 +1,19 @@
 class Word
+  attr_accessor :word
+
+  @@word_list = []
+
   def initialize(word)
     @word = word
   end
 
-  @@list = []
-
   def self.all
-    @@list
+    @@word_list
   end
 
   def save
-    @@list.push(self)
+    @@word_list.push(self)
+    # binding.pry
   end
 
 end

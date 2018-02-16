@@ -15,4 +15,11 @@ describe("Word") do
       expect(Word.all()).to(eq([word1]))
     end
   end
+  # describe("#save") do
+  #   it("adds word to list") do
+  #     word1 = Word.new("hello")
+  #     word1.save()
+  #     expect(Word.all()).to(eq([word1]))
+  #   end
+  # end
 end
