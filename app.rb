@@ -10,15 +10,15 @@ get('/') do
 end
 
 post('/') do
-  word = params["word"]
-  new_word = Word.new(word)
+  @word = params["word"]
+  new_word = Word.new(@word)
   new_word.save()
   @word_list = Word.all()
   erb(:input)
 end
 
-get('output/:id') do
-  @word = Word.find(params[:id])
-  binding.pry
+get('/output/:id') do
+  @word_to_define = Word.find(params[:id])
+  # binding.pry
   erb(:output)
 end
