@@ -15,6 +15,14 @@ describe("Word") do
       expect(Word.all()).to(eq([word1]))
     end
   end
+  describe(".clear") do
+    it("clears all items from the list") do
+      word = Word.new("hello")
+      word.save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
   describe("#id") do
     it("adds 1 to word id each time a new word is added") do
       word1 = Word.new("hello")
