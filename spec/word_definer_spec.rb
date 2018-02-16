@@ -80,4 +80,15 @@ describe("Definition") do
     end
   end
 
+  describe(".find") do
+    it("find definition by id") do
+      definition1 = Definition.new("a phrase that welcomes another person")
+      definition1.save_definition()
+      definition2 = Definition.new("a phrase that says see you later to another person")
+      definition2.save_definition()
+      expect(Definition.find(1)).to(eq(definition1))
+      expect(Definition.find(2)).to(eq(definition2))
+    end
+  end
+
 end
