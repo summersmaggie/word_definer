@@ -90,5 +90,4 @@ describe("Definition") do
       expect(Definition.find(2)).to(eq(definition2))
     end
   end
-
 end
