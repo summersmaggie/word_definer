@@ -13,7 +13,9 @@ class Word
 
   def save
     @@word_list.push(self)
-    # binding.pry
   end
+
+  # def self.find
+  #   @@
 
 end
