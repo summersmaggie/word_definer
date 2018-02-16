@@ -10,6 +10,7 @@ class Word
   end
 
   def save
+    @@list.push(self)
   end
-  
+
 end
