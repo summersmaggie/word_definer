@@ -6,7 +6,7 @@ class Word
   @@list = []
 
   def self.all
-
+    @@list
   end
 
 end
