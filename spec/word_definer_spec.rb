@@ -53,9 +53,31 @@ describe("Word") do
 end
 
 describe("Definition") do
-  describe(".all_definitions") do
+  before() do
+    Definition.clear_list()
+  end
+
+  describe(".all") do
     it("is empty at first") do
-      expect(Definition.all_definitions()).to(eq([]))
+      expect(Definition.all()).to(eq([]))
     end
   end
+
+  describe("#save_definition") do
+    it("saves definition to list") do
+      definition1 = Definition.new("a phrase that welcomes another person")
+      definition1.save_definition()
+      expect(Definition.all()).to(eq([definition1]))
+    end
+  end
+
+  describe(".clear_list") do
+    it("clears definitions from the list") do
+      definition1 = Definition.new("a phrase that welcomes another person")
+      definition1.save_definition()
+      Definition.clear_list()
+      expect(Definition.all()).to(eq([]))
+    end
+  end
+
 end

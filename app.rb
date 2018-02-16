@@ -19,5 +19,15 @@ end
 
 get('/output/:id') do
   @word_to_define = Word.find(params[:id])
+  @definition_list = Definition.all()
+  erb(:output)
+end
+
+post('/output/:id') do
+  @definition = params["definition"]
+  new_definition = Definition.new(@definition)
+  new_definition.save_definition()
+  @definition_list = Definition.all()
+  Definition.clear_list()
   erb(:output)
 end

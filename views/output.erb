@@ -6,3 +6,7 @@
   </div>
   <button type="submit" class="btn btn-success">Add a definition!</button>
 </form>
+
+<% @definition_list.each do |new_definition| %>
+  <h3><%= new_definition.definition %></a></h3>
+<% end %>

@@ -36,11 +36,21 @@ class Definition
 
   @@definition_list = []
 
-  def initialize()
+  def self.clear_list
+    @@definition_list = []
+  end
+
+  def initialize(definition)
     @definition = definition
   end
 
-  def self.all_definitions
+  def self.all
+    @@definition_list
   end
+
+  def save_definition
+    @@definition_list.push(self)
+  end
+
 
 end
