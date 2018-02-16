@@ -1,7 +1,8 @@
 require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
-require('./lib/word_definer')
+require('./lib/word.rb')
+require('./lib/definition.rb')
 require('pry')
 
 get('/') do
@@ -22,6 +23,7 @@ get('/output/:id') do
   @definition_for_word = Definition.find(params[:id])
 
   @word_to_display = @word_to_define.word
+  Definition.clear_list()
   @definition_list = Definition.all()
   erb(:output)
 end
@@ -33,13 +35,19 @@ post('/output/:id') do
   new_definition.save_definition()
 
   @definition_list = Definition.all()
-
-  @definition_list.each do |definition|
-    if @word_to_define.id == @definition_for_word.id
-      binding.pry
-      return @definition
-    end
-  end
+  #
+  # @definition_list.each do |definition|
+  #   if @word_to_define.id == @definition_for_word.id
+  #     binding.pry
+  #     return @definition
+  #   end
+  # end
 
   erb(:output)
+end
+
+get('/reload') do
+  @word_to_define = Word.find(params[:id])
+  @definition_for_word = Definition.find(params[:id])
+  erb(:reload)
 end
