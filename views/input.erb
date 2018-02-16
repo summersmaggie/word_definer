@@ -10,6 +10,9 @@
   <button type="submit" class="btn btn-info">Add to my list!</button>
 </form>
 
+<br>
+<p> Click on a word in your list to define it! </p>
+
 <% @word_list.each do |new_word| %>
   <h3><a href="/output/<%= new_word.id %>"><%= new_word.word %></a></h3>
 <% end %>
