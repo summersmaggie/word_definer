@@ -9,4 +9,7 @@ class Word
     @@list
   end
 
+  def save
+  end
+  
 end

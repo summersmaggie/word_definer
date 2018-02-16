@@ -8,4 +8,10 @@ describe("Word") do
       expect(Word.all()).to(eq([]))
     end
   end
+  describe("save") do
+    it("adds word to list") do
+      word1 = Word.new("hello")
+      expect(word1.save()).to(eq("hello"))
+    end
+  end
 end
