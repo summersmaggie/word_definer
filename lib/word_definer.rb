@@ -7,7 +7,7 @@ class Word
   def self.clear
     @@word_list = []
   end
-  
+
   def initialize(word)
     @word = word
     @id = @@word_list.length + 1
@@ -21,7 +21,8 @@ class Word
     @@word_list.push(self)
   end
 
-  # def self.find
-  #   @@
+  def self.find(id)
+
+  end
 
 end
