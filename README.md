@@ -19,15 +19,13 @@ _This application lets kids enter a word, and then enter one or more definitions
 
 ## Setup/Installation Requirements
 
-* _Check out the program here:
+* _Check out the program here: https://vast-brook-19208.herokuapp.com/
 
 * _Clone repository_
 
 * _Open in text editor_
 
 * _Open terminal_
-
-* _Run rspec in terminal to see tests pass_
 
 ## Support and contact details
 

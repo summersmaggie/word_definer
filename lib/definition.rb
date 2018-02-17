@@ -1,4 +1,3 @@
-
 class Definition
   attr_accessor :definition
   attr_reader :id

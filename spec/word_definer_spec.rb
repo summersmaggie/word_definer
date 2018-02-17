@@ -1,6 +1,7 @@
 require('rspec')
 require('pry')
-require('word_definer')
+require('./lib/word.rb')
+require('./lib/definition.rb')
 
 describe("Word") do
   before() do
