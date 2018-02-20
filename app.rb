@@ -27,9 +27,6 @@ post('/output/:id') do
   @word_list = Word.all()
 
   definition = Definition.new(params[:definition])
-  @word_list.add_definition(definition)
-  binding.pry
-
-
+  @word.add_definition(definition)
   erb(:output)
 end

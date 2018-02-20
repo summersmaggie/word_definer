@@ -7,4 +7,6 @@
   <button type="submit" class="btn btn-success">Add a definition!</button>
 </form>
 
-<h3><%= @word_list  %></h3>
+<% @word.definitions.each do |definition| %>
+  <h3><%= definition.definition %></h3>
+<% end %>

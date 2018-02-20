@@ -1,5 +1,5 @@
 class Word
-  attr_accessor :word, :definition
+  attr_accessor :word, :definitions
   attr_reader :id
 
   @@word_list = []
