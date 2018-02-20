@@ -1,5 +1,5 @@
 class Word
-  attr_accessor :word
+  attr_accessor :word, :definition
   attr_reader :id
 
   @@word_list = []
@@ -7,11 +7,7 @@ class Word
   def initialize(word)
     @word = word
     @id = @@word_list.length + 1
-    @definition = []
-  end
-
-  def self.clear
-    @@word_list = []
+    @definitions = []
   end
 
   def save_word
@@ -22,12 +18,8 @@ class Word
     @@word_list
   end
 
-  def definitions(word)
-    word.definition
-  end
-
-  def add_definition
-    @definitions.push(definitions)
+  def add_definition(definition)
+    @definitions.push(definition)
   end
 
   def self.find(id)
