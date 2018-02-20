@@ -18,7 +18,6 @@ end
 
 get('/output/:id') do
   @word = Word.find(params[:id])
-  @word_list = Word.all()
   erb(:output)
 end
 

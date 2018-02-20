@@ -10,13 +10,11 @@ describe('the word path', {:type => :feature}) do
     click_button('Add to my list!')
     expect(page).to have_content("hello")
   end
+
+  it('processes the user entry and returns the definition') do
+    visit('/output/:id')
+    fill_in('definition', :with => "a way to welcome someone")
+    click_button('Add a definition!')
+    expect(page).to have_content("a way to welcome someone")
+  end
 end
-#
-#   it('processes the user entry and returns the definition') do
-#     visit('/output/:id')
-#     save_and_open_page
-#     fill_in('definition', :with => "a way to welcome someone")
-#     click_button('Add a definition!')
-#     expect(page).to have_content("a way to welcome someone")
-#   end
-# end
